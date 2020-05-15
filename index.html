@@ -2,16 +2,22 @@
 
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="css/pagination.css" rel="stylesheet" type="text/css">
-		<style type="text/css">
-			.pagination-pages {
-				float:right;
-			}
-		</style>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- Leave those next 4 lines if you care about users using IE8 -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 
@@ -22,9 +28,9 @@
 		</nav>
 
 		<div class="container-fluid">
-
+			
 			<div class="text-center">
-				<img src="img/profile.png" width=300 class="profile-pic">
+				<img src="img/profile.png" width=200 class="profile-pic">
 				<h1>Charles Osoti</h1>
 			  	<h4>Learning Journey</h4>
 			  	<h5>...Software Engineer</h5>
@@ -45,7 +51,8 @@
 				</div>
 			</div>
 
-			<div class="row">
+
+			<div class="row row-white">
 				<p class="text-center"></p>
 
 			  	<div id="pagination-tutorials" class="" style="padding-top:10px; margin-top:10px; margin-left: 45%">
@@ -96,7 +103,7 @@
 			      },
 			      callback: function(response, pagination) {
 			        window.console && console.log(22, response, pagination);
-			        var dataHtml = '<span>';
+			        var dataHtml = '<div>';
 
 			        $.each(response, function (index, item) {
 			          // dataHtml += "<h4><a target='_blank' href='" + item.link+"'>"+ item.title+"</a></h4>";S
@@ -117,13 +124,13 @@
 					dataHtml +=				'<a class="btn btn-launch" href="https://github.com/Chippd/slackDomainChecker" target="blank">View on Github</a>';
 					dataHtml +=			'</div>';
 					dataHtml +=		'</div>';
-					dataHtml +=     '<div class="col-sm-12">';
+					dataHtml +=     '<div class="col-xs-12">';
     				dataHtml +=     	'<div style="border-bottom:1px solid #ccc;"></div>';
 					dataHtml +=		'</div>';
 					// dataHtml += '</div>';
 			      });
 
-			       dataHtml += '</span>';
+			       dataHtml += '</div>';
 
 			        container.prev().html(dataHtml);
 			      }
